@@ -27,4 +27,13 @@ package info2_refactor;
 
 public class Main {
 
+	String testString = "This is a test string";
+	
+	
+	public Main() {
+	}
+	
+	public void returnTestString() {
+		System.out.println(testString);
+	}
 }

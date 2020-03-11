@@ -3,7 +3,7 @@ package info2_refactor;
 /*Program which contains programs made in the HTW Berlin IMI Bachelor Info 2 course (WiSe 2019/2020). 
  * @konrad-u
  * 
- * Interface for Main Class, which loads and interacts with instances of each lab sessions' program. 
+ * Interface for Main Class Object, which loads and interacts with instances of each lab sessions' program. 
  * 04.03.2020: 
  * 		Idea is to incorporate all programs made throughout semester.
  * 		Main Class here will manage the user interface for accessing each program and creating instances of it. 
