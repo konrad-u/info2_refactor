@@ -22,6 +22,7 @@ package info2_refactor;
  * 
  * Content so far: 
  * 1. Simple server client network communication 
+ * Test to see if repository is properly set up
  */
 
 public class Main {
