@@ -7,11 +7,11 @@ package info2_refactor;
 
 public class Console_UI {
 	
-	Main mainP;
+	Main main;
 
 	public Console_UI() {
 	
-		mainP = new Main();
+		main = new Main();
 	
 	}
 	
@@ -19,8 +19,12 @@ public class Console_UI {
 	public static void main(String args[]) {
 		
 	Console_UI thisUI = new Console_UI();
-	
-	thisUI.mainP.returnTestString();
-	
+	thisUI.printLabs();
 	}
+	
+	public void printLabs() {
+		main.printAllLabServers();
+	}
+	
+	
 }

@@ -1,27 +1,159 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <help_text>// Uncomment the following line to change the fontsize and font:
+// fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.
+
+OWN NOTES:
+
+- + is a public attribute
+
+- - is a private attribute
+
+- # is a protected attribute
+
+</help_text>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>90</y>
-      <w>210</w>
-      <h>190</h>
+      <x>21</x>
+      <y>175</y>
+      <w>322</w>
+      <h>245</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
-Package::info2_refactor
-{Some Properties}
+    <panel_attributes>Main
 --
--id: Console_UI
-_-ClassAttribute: Long_
+*Fields/Attributes*
+
+- labArray: Array&lt;String&gt;
+
 --
-#Operation(i: int): int
-/+AbstractOperation()/
+*Methods/Operations*
+
+- 
 --
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
+*Responsibilities*
+-- holds a container of the classServer objects and user information
+-- 
+-- creates LabServer objects for each class, which in turn are responsible
+   for proper execution of their class
+
+-- holds case logic for what user wants do have done?
+
+--
+*Questions*
+
+- how do I tell/know which lab program the user is addressing with input?
+  Should I only allow one program to be run at a time? </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>0</y>
+      <w>217</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Console_UI
+--
+*Fields/Attributes*
+
+-main: Main
+--
+*Methods/Operations*
+
+-main(String args[]): void 
+- 
+--
+*Responsibilities*
+-- take user input and pass it to the main object
+-- console log print class and object data
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>35</x>
+      <y>448</y>
+      <w>301</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>LabServer
+--
+*Fields/Attributes*
+
+- labArray: Array&lt;String&gt;
+
+--
+*Methods/Operations*
+
+- labTitle: String
+- labDescription: String
+- 
+--
+*Responsibilities*
+-- Keeps all data around a lab: name, description, possible methods....
+-- take user input, passed via the console
+-- Run a Lab's program properly = CREATES LAB OBJECT
+-- Tracks all the objects of the class that have been created
+-- 
+*Questions*
+
+- can/should this just be integrated int main lab class?
+--&gt; no; possibly in future but for now goal is to import labs as are</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>35</x>
+      <y>777</y>
+      <w>301</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>LabClass
+--
+*Fields/Attributes*
+
+
+--
+*Methods/Operations*
+
+-- 
+--
+*Responsibilities*
+-- contains the actual lab code
+--object of this class is created by labServer
+
+
+
+--
+*Questions*
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

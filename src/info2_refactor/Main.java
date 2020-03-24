@@ -1,11 +1,13 @@
 package info2_refactor;
 
+import java.util.ArrayList;
+
 /*
  * Program which contains programs made in the HTW Berlin IMI Info 2 course. 
  * @konrad-u
  * 
  * The following individual lab sessions (and resulting programs) made up the practical work: 
- * - Lab 01: Chatterbox (Server-Client network communication)
+ * - Lab 01: Chatterbox (Server-Client network communication) [OMITTED AS NEEDS TWO COMPUTERS TO FULLY FUNCTION]
  * - Lab 02: Alphabet character counter, visualization with Histogram
  * - Lab 03: Algorithm execution times
  * - Lab 04: Julian Date calendar to learn about abstract data types
@@ -21,19 +23,30 @@ package info2_refactor;
  * 
  * 
  * Content so far: 
- * 1. Simple server client network communication 
+ * 1. Histogram program 
  * Test to see if repository is properly set up
  */
 
 public class Main {
 
-	String testString = "This is a test string";
+	Lab2_Histogram_LabServer lab2;
+	
+	ArrayList<LabServer> allLabServers = new ArrayList<>();
 	
 	
 	public Main() {
+		lab2 = new Lab2_Histogram_LabServer();
+		allLabServers.add(lab2);
 	}
 	
-	public void returnTestString() {
-		System.out.println(testString);
+	public void printAllLabServers() {
+		System.out.println("The following lab programs are available: ");
+		for(LabServer LabServer : allLabServers) {
+			System.out.println(LabServer.getLabTitle());
+		}
+		allLabServers.forEach(LabServer -> System.out.println(LabServer.getLabTitle()));
+		
 	}
+	
+
 }

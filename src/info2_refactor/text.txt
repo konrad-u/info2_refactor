@@ -1,0 +1,3 @@
+this is A text with "chars". 
+There is also a carriage return
+in this file. 
